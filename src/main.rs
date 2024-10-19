@@ -1,11 +1,5 @@
-use api::web::{home, server};
-use askama::Template;
-use axum::{response::Html, routing::get, Router};
+use api::web::server;
 use infra::{config::Config, logger};
-use std::net::SocketAddr;
-use tokio::net::TcpListener;
-use tower_http::services::ServeDir;
-use tracing::info;
 
 mod api;
 mod infra;
