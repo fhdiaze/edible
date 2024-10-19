@@ -1,0 +1,130 @@
+body {
+  margin: 40px auto;
+  padding: 0 10px;
+  max-width: 90%;
+  font-size: 18px;
+  color: #444;
+  line-height: 1.6;
+  display: block;
+  overflow: auto;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+.footer {
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  column-gap: 2px;
+}
+
+.header__menu {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.header__logo {
+  text-decoration: none;
+}
+
+.menu {
+  border-style: groove;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu__header {
+  text-align: center;
+}
+
+.menu__body {
+  display: flex;
+  flex-direction: row;
+  overflow: auto;
+  column-gap: 15px;
+  margin: 40px auto;
+  margin-bottom: 5px;
+  align-items: start;
+}
+
+.menu__section {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2px;
+  padding: 5px;
+  min-width: 200px;
+  max-width: 400px;
+}
+
+.menu-section__header {
+  font-weight: bold;
+  text-align: center;
+}
+
+.menu-section__body {
+  text-align: left;
+}
+
+.cards {
+  display: flex;
+  width: 100%;
+  height: auto;
+  background-color: gray;
+  flex-wrap: nowrap;
+}
+
+.inner-flexbox {
+  width: 75%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.inner-flexbox > div {
+  width: 10rem;
+  height: 10rem;
+  background-color: salmon;
+  margin: 10px;
+}
+
+.menu__dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.menu__options {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  z-index: 1;
+  right: 0;
+}
+
+.menu__option {
+  color: black;
+  display: block;
+  text-decoration: none;
+  padding: 12px 16px;
+}
+
+.menu__dropdown:hover .menu__options {
+  display: block;
+}
+
+.menu__option:hover {
+  background-color: #f1f1f1
+}

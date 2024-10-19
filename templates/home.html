@@ -1,17 +1,6 @@
 {% extends "comps/base.html" %}
-
 {% block title %}Comestible{% endblock %}
-
 {% block content %}
-<form hx-post="/cmd.run" hx-target="#outputs" hx-swap="afterbegin" hx-on::after-request="if(event.detail.successful) this.reset()">
-  <div class="right-sidebar">
-    <div class="right-sidebar__main">
-      <input id="cmd" name="cmd" type="search" placeholder="Ask" class="growable">
-    </div>
-    <div class="right-sidebar__bar">
-      <button type="submit">►</button>
-    </div>
-  </div>
-</form>
+{% include "comps/menu.html" %}
 <div id="outputs"></div>
 {% endblock %}
