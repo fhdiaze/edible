@@ -44,7 +44,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: buildAndPush
-        uses: docker/build-push-action@v6
+        uses: docker/build-push-action@master
         with:
           context: .
           push: true
