@@ -49,6 +49,7 @@ h3 {
 .menu__body {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   overflow: auto;
   column-gap: 15px;
   margin: 40px auto;

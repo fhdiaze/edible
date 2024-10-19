@@ -4,7 +4,7 @@ use axum::{response::Html, routing::get, Router};
 use crate::infra::result::{AppError, AppResult};
 
 #[derive(Template)]
-#[template(path = "school.html")]
+#[template(path = "blog.html")]
 struct BlogTemplate;
 
 async fn handle_get() -> AppResult<Html<String>> {
