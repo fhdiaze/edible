@@ -25,6 +25,6 @@ COPY ./assets ./assets
 COPY ./config ./config
 COPY ./templates ./templates
 
-ENV FRUGAL_SERVER__PORT=80
+ENV EDIBLE_SERVER__PORT=80
 
 ENTRYPOINT ["./edible"]
