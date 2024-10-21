@@ -1,0 +1,40 @@
+.menu {
+  border-style: groove;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu__header {
+  text-align: center;
+}
+
+.menu__body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow: auto;
+  gap: 15px;
+  margin: 40px auto;
+  margin-bottom: 5px;
+  align-items: start;
+  justify-content: center;
+}
+
+.menu__section {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2px;
+  padding: 5px;
+  min-width: 200px;
+  max-width: 350px;
+}
+
+.menu-section__header {
+  font-weight: bold;
+  text-align: center;
+}
+
+.menu-section__body {
+  text-align: left;
+}

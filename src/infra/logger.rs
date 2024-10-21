@@ -1,5 +1,4 @@
 use std::str::FromStr;
-
 use tower_http::{
   classify::{ServerErrorsAsFailures, SharedClassifier},
   trace::{DefaultMakeSpan, DefaultOnRequest, DefaultOnResponse, TraceLayer},

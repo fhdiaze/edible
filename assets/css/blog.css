@@ -1,0 +1,40 @@
+.blog {
+  border-style: groove;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog__header {
+  text-align: center;
+}
+
+.blog__body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow: auto;
+  gap: 15px;
+  margin: 40px auto;
+  margin-bottom: 5px;
+  align-items: start;
+  justify-content: start;
+}
+
+.blog-article {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2px;
+  padding: 5px;
+  min-width: 200px;
+  max-width: 350px;
+}
+
+.blog-article__header {
+  font-weight: bold;
+  text-align: center;
+}
+
+.blog-article__body {
+  text-align: left;
+}

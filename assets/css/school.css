@@ -1,0 +1,40 @@
+.school {
+  border-style: groove;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.school__header {
+  text-align: center;
+}
+
+.school__body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow: auto;
+  gap: 15px;
+  margin: 40px auto;
+  margin-bottom: 5px;
+  align-items: start;
+  justify-content: center;
+}
+
+.school__section {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2px;
+  padding: 5px;
+  min-width: 200px;
+  max-width: 350px;
+}
+
+.school-section__header {
+  font-weight: bold;
+  text-align: center;
+}
+
+.school-section__body {
+  text-align: left;
+}
