@@ -12,7 +12,7 @@ use tower_http::{
 };
 use tracing::info;
 
-use super::{about, blog, contact, home, news, school};
+use super::{about, blog, contact, home, news, store};
 
 pub async fn start(config: &Config) {
   info!("Starting the web server!");
@@ -44,7 +44,7 @@ pub fn cors_layer() -> CorsLayer {
 fn build_router() -> Router {
   Router::new()
     .nest("/", home::route())
-    .nest("/", school::route())
+    .nest("/", store::route())
     .nest("/", blog::route())
     .nest("/", about::route())
     .nest("/", contact::route())

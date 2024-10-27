@@ -1,15 +1,15 @@
-.school {
+.news {
   border-style: groove;
   overflow: auto;
   display: flex;
   flex-direction: column;
 }
 
-.school__header {
+.news__header {
   text-align: center;
 }
 
-.school__body {
+.news__body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -21,7 +21,7 @@
   justify-content: center;
 }
 
-.school__section {
+.news__section {
   display: flex;
   flex-direction: column;
   row-gap: 2px;
@@ -30,11 +30,11 @@
   max-width: 350px;
 }
 
-.school-section__header {
+.news-section__header {
   font-weight: bold;
   text-align: center;
 }
 
-.school-section__body {
+.news-section__body {
   text-align: left;
 }

@@ -1,7 +1,8 @@
 @import url('menu.css');
 @import url('header.css');
 @import url('blog.css');
-@import url('school.css');
+@import url('store.css');
+@import url('news.css');
 
 body {
   margin: 40px auto;
