@@ -1,8 +1,6 @@
 @import url('menu.css');
 @import url('header.css');
-@import url('blog.css');
-@import url('store.css');
-@import url('news.css');
+@import url('cards.css');
 
 body {
   margin: 40px auto;
@@ -24,5 +22,3 @@ h3 {
 .footer {
   text-align: center;
 }
-
-

@@ -1,15 +1,15 @@
-.news {
+.cards {
   border-style: groove;
   overflow: auto;
   display: flex;
   flex-direction: column;
 }
 
-.news__header {
+.cards__header {
   text-align: center;
 }
 
-.news__body {
+.cards__body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -21,7 +21,7 @@
   justify-content: center;
 }
 
-.news__section {
+.card {
   display: flex;
   flex-direction: column;
   row-gap: 2px;
@@ -30,11 +30,28 @@
   max-width: 350px;
 }
 
-.news-section__header {
+.card__header {
   font-weight: bold;
   text-align: center;
 }
 
-.news-section__body {
+.card__title {
+  text-align: center;
+  margin: 0;
+}
+
+.card__tags {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  font-style: italic;
+}
+
+.card__tag {
+  text-align: left;
+  padding: 0;
+}
+
+.card__body {
   text-align: left;
 }
