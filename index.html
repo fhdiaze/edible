@@ -42,7 +42,7 @@
         <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M2 5h16M2 10h16M2 15h16" stroke="#1C231F" stroke-width="1.6" stroke-linecap="round"/></svg>
       </label>
     </div>
-    <input type="checkbox" id="nav-check" class="visually-hidden" />
+    <input type="checkbox" id="nav-check" class="header__checkbox" />
     <div class="header__mobile-panel">
       <a href="index.html" class="header__mobile-link header__mobile-link--current">Inicio</a>
       <a href="services.html" class="header__mobile-link">Servicios</a>
@@ -56,7 +56,7 @@
   <main id="content">
     <section class="hero">
       <div class="wrap hero__inner">
-        <div>
+        <div class="hero__copy">
           <h1 class="hero__title">Tu negocio de alimentos, listo para cumplir</h1>
           <p class="hero__lead">Capacitación, tablas nutricionales, rotulado y trámite de autorización sanitaria para negocios de alimentos y bebidas.</p>
           <div class="hero__ctas">
@@ -64,15 +64,15 @@
             <a class="btn btn--ghost" href="services.html">Ver servicios</a>
           </div>
         </div>
-        <div class="flow">
+        <div class="flow hero__flow">
           <button class="flow__item" data-target="f1">
             <span class="flow__emoji">🎓</span> Capacitarme en manipulación de alimentos
             <svg class="flow__chevron" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M6 3l5 5-5 5" stroke="#4B564E" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
           <div class="flow__panel" id="f1">
             <div class="flow__panel-inner">
-              <p>Formación práctica para ti o tu equipo en buenas prácticas de higiene, con constancia de asistencia al finalizar.</p>
-              <a href="services.html">Ver esta capacitación</a>
+              <p class="flow__text">Formación práctica para ti o tu equipo en buenas prácticas de higiene, con constancia de asistencia al finalizar.</p>
+              <a class="flow__link" href="services.html">Ver esta capacitación</a>
             </div>
           </div>
 
@@ -82,8 +82,8 @@
           </button>
           <div class="flow__panel" id="f2">
             <div class="flow__panel-inner">
-              <p>Te explicamos qué necesitas para poner tu producto en regla: tabla nutricional, rotulado y documentación.</p>
-              <a href="blog.html">Ver la guía en el blog</a>
+              <p class="flow__text">Te explicamos qué necesitas para poner tu producto en regla: tabla nutricional, rotulado y documentación.</p>
+              <a class="flow__link" href="blog.html">Ver la guía en el blog</a>
             </div>
           </div>
 
@@ -93,8 +93,8 @@
           </button>
           <div class="flow__panel" id="f3">
             <div class="flow__panel-inner">
-              <p>Te acompañamos en el trámite de autorización sanitaria INVIMA para que tu negocio pueda operar en regla.</p>
-              <a href="https://wa.me/573144623898?text=Hola%2C%20quiero%20tramitar%20mi%20autorizaci%C3%B3n%20sanitaria" target="_blank" rel="noopener noreferrer">Consultar por WhatsApp</a>
+              <p class="flow__text">Te acompañamos en el trámite de autorización sanitaria INVIMA para que tu negocio pueda operar en regla.</p>
+              <a class="flow__link" href="https://wa.me/573144623898?text=Hola%2C%20quiero%20tramitar%20mi%20autorizaci%C3%B3n%20sanitaria" target="_blank" rel="noopener noreferrer">Consultar por WhatsApp</a>
             </div>
           </div>
 
@@ -104,8 +104,8 @@
           </button>
           <div class="flow__panel" id="f4">
             <div class="flow__panel-inner">
-              <p>Muchos negocios llegan sin saber qué necesitan primero. Te damos una asesoría inicial para identificar tus próximos pasos.</p>
-              <a href="https://wa.me/573144623898?text=Hola%2C%20no%20s%C3%A9%20por%20d%C3%B3nde%20empezar%2C%20necesito%20asesor%C3%ADa" target="_blank" rel="noopener noreferrer">Pedir asesoría</a>
+              <p class="flow__text">Muchos negocios llegan sin saber qué necesitan primero. Te damos una asesoría inicial para identificar tus próximos pasos.</p>
+              <a class="flow__link" href="https://wa.me/573144623898?text=Hola%2C%20no%20s%C3%A9%20por%20d%C3%B3nde%20empezar%2C%20necesito%20asesor%C3%ADa" target="_blank" rel="noopener noreferrer">Pedir asesoría</a>
             </div>
           </div>
         </div>
@@ -115,10 +115,10 @@
     <section class="band band--alt" id="segmento">
       <div class="wrap">
         <div class="section-head">
-          <h2>¿Qué tipo de segmento eres?</h2>
-          <p>Cuéntanos en qué segmento estás y te orientamos sobre qué necesitas primero.</p>
+          <h2 class="section-head__title">¿Qué tipo de segmento eres?</h2>
+          <p class="section-head__text">Cuéntanos en qué segmento estás y te orientamos sobre qué necesitas primero.</p>
         </div>
-        <div class="segment__grid">
+        <div class="segment">
           <a class="segment__card" href="https://wa.me/573144623898?text=Hola%2C%20mi%20negocio%20es%20de%20carnes%20y%20productos%20c%C3%A1rnicos%20comestibles" target="_blank" rel="noopener noreferrer">
             <span class="segment__emoji">🥩</span>
             <h3 class="segment__title">Carnes y productos cárnicos comestibles</h3>
@@ -136,34 +136,34 @@
     <section class="band" id="proceso">
       <div class="wrap">
         <div class="section-head">
-          <h2>Cómo funciona</h2>
-          <p>Un proceso corto, pensado para que no tengas que perseguir el trámite.</p>
+          <h2 class="section-head__title">Cómo funciona</h2>
+          <p class="section-head__text">Un proceso corto, pensado para que no tengas que perseguir el trámite.</p>
         </div>
-        <div class="process__list">
+        <div class="process">
           <div class="process__step">
             <div class="process__number">1</div>
-            <div>
+            <div class="process__body">
               <h3 class="process__title">Escríbenos</h3>
               <p class="process__desc">Cuéntanos qué necesita tu negocio: curso, tabla nutricional o rotulado.</p>
             </div>
           </div>
           <div class="process__step">
             <div class="process__number">2</div>
-            <div>
+            <div class="process__body">
               <h3 class="process__title">Agendamos</h3>
               <p class="process__desc">Definimos fecha y modalidad según tu disponibilidad.</p>
             </div>
           </div>
           <div class="process__step">
             <div class="process__number">3</div>
-            <div>
+            <div class="process__body">
               <h3 class="process__title">Realizamos el trabajo</h3>
               <p class="process__desc">Curso, cálculo o etiqueta, con acompañamiento directo.</p>
             </div>
           </div>
           <div class="process__step">
             <div class="process__number">4</div>
-            <div>
+            <div class="process__body">
               <h3 class="process__title">Recibes tu documento</h3>
               <p class="process__desc">Constancia de capacitación, tabla nutricional o etiqueta lista para usar.</p>
             </div>
@@ -174,10 +174,10 @@
 
     <!-- OJO: los nombres de abajo son ejemplos ilustrativos, reemplazar por negocios reales antes de publicar el sitio. -->
     <section class="band band--alt" id="casos">
-      <div class="wrap">
+      <div class="wrap trust">
         <div class="section-head">
-          <h2>Negocios que ya trabajaron con nosotros</h2>
-          <p>Algunos de los negocios que hemos acompañado en su proceso de cumplimiento sanitario.</p>
+          <h2 class="section-head__title">Negocios que ya trabajaron con nosotros</h2>
+          <p class="section-head__text">Algunos de los negocios que hemos acompañado en su proceso de cumplimiento sanitario.</p>
         </div>
         <div class="trust__row">
           <span class="trust__chip">La Quemadera — Café</span>
@@ -191,7 +191,7 @@
 
   <footer class="footer">
     <div class="wrap">
-      <p>© 2024 comestible.co — Todos los derechos reservados.</p>
+      <p class="footer__text">© 2024 comestible.co — Todos los derechos reservados.</p>
     </div>
   </footer>
 

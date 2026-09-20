@@ -42,7 +42,7 @@
         <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M2 5h16M2 10h16M2 15h16" stroke="#1C231F" stroke-width="1.6" stroke-linecap="round"/></svg>
       </label>
     </div>
-    <input type="checkbox" id="nav-check" class="visually-hidden" />
+    <input type="checkbox" id="nav-check" class="header__checkbox" />
     <div class="header__mobile-panel">
       <a href="index.html" class="header__mobile-link">Inicio</a>
       <a href="services.html" class="header__mobile-link">Servicios</a>
@@ -57,18 +57,18 @@
     <section class="band">
       <div class="wrap">
         <div class="section-head">
-          <h1>Blog</h1>
-          <p>Artículos relacionados con la producción de alimentos.</p>
+          <h1 class="section-head__title">Blog</h1>
+          <p class="section-head__text">Artículos relacionados con la producción de alimentos.</p>
         </div>
-        <div class="cards">
+        <div class="card-grid">
           <div class="card">
             <h2 class="card__title">Pasos para registrar tu producto ante la autoridad sanitaria</h2>
             <p class="card__desc">Una guía corta con lo esencial antes de lanzar tu producto: qué documentos necesitas, en qué orden y qué errores evitar.</p>
-            <ul>
-              <li>1. Verifica si tu producto requiere registro o notificación sanitaria</li>
-              <li>2. Prepara tu tabla nutricional y rotulado</li>
-              <li>3. Reúne la documentación de tu planta o local</li>
-              <li>4. Radica el trámite ante la autoridad correspondiente</li>
+            <ul class="card__list">
+              <li class="card__list-item">1. Verifica si tu producto requiere registro o notificación sanitaria</li>
+              <li class="card__list-item">2. Prepara tu tabla nutricional y rotulado</li>
+              <li class="card__list-item">3. Reúne la documentación de tu planta o local</li>
+              <li class="card__list-item">4. Radica el trámite ante la autoridad correspondiente</li>
             </ul>
             <a class="card__link" href="https://wa.me/573144623898?text=Hola%2C%20quiero%20la%20gu%C3%ADa%20completa%20para%20registrar%20mi%20producto" target="_blank" rel="noopener noreferrer">Leer la guía completa</a>
           </div>
@@ -87,8 +87,8 @@
     <section class="band band--alt">
       <div class="wrap">
         <div class="empty-state">
-          <strong>Más artículos, muy pronto</strong>
-          Próximamente encontrarás aquí más guías sobre manipulación de alimentos, rotulado y normativa sanitaria.
+          <strong class="empty-state__title">Más artículos, muy pronto</strong>
+          <p class="empty-state__text">Próximamente encontrarás aquí más guías sobre manipulación de alimentos, rotulado y normativa sanitaria.</p>
         </div>
       </div>
     </section>
@@ -96,7 +96,7 @@
 
   <footer class="footer">
     <div class="wrap">
-      <p>© 2024 comestible.co — Todos los derechos reservados.</p>
+      <p class="footer__text">© 2024 comestible.co — Todos los derechos reservados.</p>
     </div>
   </footer>
 
