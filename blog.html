@@ -3,12 +3,15 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Produccion segura de alimentos." />
-        <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F5F6EF" />
-        <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#070a19" />
+        <meta name="description" content="Guías y consejos sobre producción segura de alimentos, rotulado y normativa sanitaria." />
+        <meta name="theme-color" content="#F5F6EF" />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="es_CO" />
+        <meta property="og:title" content="Blog — Comestible" />
+        <meta property="og:description" content="Guías y consejos sobre producción segura de alimentos, rotulado y normativa sanitaria." />
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+        <link rel="preload" href="assets/fonts/work-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
 
         <link href="assets/css/main.css" rel="stylesheet" />
         <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path d='M4 13.5C4 12.67 4.67 12 5.5 12h19c.83 0 1.5.67 1.5 1.5C26 19.3 21.3 24 15.5 24h-1C8.7 24 4 19.3 4 13.5z' fill='%232F6B4F'/><path d='M11 8C11 6.5 12 5 13 4' stroke='%23C98A2C' stroke-width='1.6' stroke-linecap='round' fill='none'/><path d='M15 8C15 6 16.2 4.5 17 3.5' stroke='%23C98A2C' stroke-width='1.6' stroke-linecap='round' fill='none'/></svg>" />
@@ -38,14 +41,13 @@
                     <a href="about.html" class="header__nav-link">Acerca</a>
                 </nav>
                 <a class="btn btn--primary header__cta" href="https://wa.me/573144623898" target="_blank" rel="noopener noreferrer">Escríbenos</a>
-                <label for="nav-check" class="header__toggle" aria-label="Abrir menú">
+                <button type="button" class="header__toggle" id="nav-toggle" aria-label="Menú" aria-controls="mobile-panel" aria-expanded="false">
                     <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
                         <path d="M2 5h16M2 10h16M2 15h16" stroke="#1C231F" stroke-width="1.6" stroke-linecap="round" />
                     </svg>
-                </label>
+                </button>
             </div>
-            <input type="checkbox" id="nav-check" class="header__checkbox" />
-            <div class="header__mobile-panel">
+            <div class="header__mobile-panel" id="mobile-panel">
                 <a href="index.html" class="header__mobile-link">Inicio</a>
                 <a href="services.html" class="header__mobile-link">Servicios</a>
                 <a href="blog.html" class="header__mobile-link header__mobile-link--current">Blog</a>
@@ -66,18 +68,18 @@
                         <div class="card">
                             <h2 class="card__title">Pasos para comercializar tu producto ante la autoridad sanitaria (INVIMA)</h2>
                             <p class="card__desc">Una guía corta con lo esencial antes de lanzar tu producto al mercado: qué documentos necesitas, en qué orden y qué errores evitar.</p>
-                            <ul class="card__list">
-                                <li class="card__list-item">1. Verifica si tu producto requiere registro, permiso o notificación sanitaria (INVIMA)</li>
-                                <li class="card__list-item">2. Reúne la información básica the rotulado y etiquetado</li>
-                                <li class="card__list-item">3. Elabora tu tabla nutricional y rotulado</li>
-                                <li class="card__list-item">4. Reúne la documentación de tu fabrica o establecimiento</li>
-                                <li class="card__list-item">5. Radica el trámite ante el INVIMA</li>
-                            </ul>
-                            <a class="card__link" href="https://wa.me/573144623898?text=Hola%2C%20quiero%20la%20gu%C3%ADa%20completa%20para%20registrar%20mi%20producto" target="_blank" rel="noopener noreferrer">Leer la guía completa</a>
+                            <ol class="card__list">
+                                <li class="card__list-item">Verifica si tu producto requiere registro, permiso o notificación sanitaria (INVIMA)</li>
+                                <li class="card__list-item">Reúne la información básica de rotulado y etiquetado</li>
+                                <li class="card__list-item">Elabora tu tabla nutricional y rotulado</li>
+                                <li class="card__list-item">Reúne la documentación de tu fábrica o establecimiento</li>
+                                <li class="card__list-item">Radica el trámite ante el INVIMA</li>
+                            </ol>
+                            <a class="card__link" href="https://wa.me/573144623898?text=Hola%2C%20quiero%20la%20gu%C3%ADa%20completa%20para%20registrar%20mi%20producto" target="_blank" rel="noopener noreferrer">Pedir la guía completa por WhatsApp</a>
                         </div>
                         <div class="card">
                             <h2 class="card__title">Consejos para la manipulación segura de alimentos</h2>
-                            <p class="card__desc">Algunas prácticas higiénicas básicas para reducir riesgos de contaminación en la manipulación diaria de alimentos: uso de dotación, lavado frecuente de manos, control de temperaturas en refrigeración, congelación y cocción, separación de alimentos crudos y cocidos, limpieza y desinfección constante de áreas, equipos y superficies. </p>
+                            <p class="card__desc">Algunas prácticas higiénicas básicas para reducir riesgos de contaminación en la manipulación diaria de alimentos: uso de dotación, lavado frecuente de manos, control de temperaturas en refrigeración, congelación y cocción, separación de alimentos crudos y cocidos, limpieza y desinfección constante de áreas, equipos y superficies.</p>
                         </div>
                         <div class="card">
                             <h2 class="card__title">Normas básicas para establecimientos que comercializan alimentos y bebidas</h2>
@@ -99,7 +101,7 @@
 
         <footer class="footer">
             <div class="wrap">
-                <p class="footer__text">© 2024 comestible.co — Todos los derechos reservados.</p>
+                <p class="footer__text">© <span data-year>2026</span> comestible.co — Todos los derechos reservados.</p>
             </div>
         </footer>
 

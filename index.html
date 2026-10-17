@@ -3,17 +3,20 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Produccion segura de alimentos." />
-        <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F5F6EF" />
-        <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#070a19" />
+        <meta name="description" content="Capacitación en manipulación de alimentos, tablas nutricionales, rotulado y trámite de autorización sanitaria INVIMA en Cundinamarca y Boyacá." />
+        <meta name="theme-color" content="#F5F6EF" />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="es_CO" />
+        <meta property="og:title" content="Comestible — Cumplimiento sanitario para negocios de alimentos" />
+        <meta property="og:description" content="Capacitación en manipulación de alimentos, tablas nutricionales, rotulado y trámite de autorización sanitaria INVIMA en Cundinamarca y Boyacá." />
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+        <link rel="preload" href="assets/fonts/work-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
 
         <link href="assets/css/main.css" rel="stylesheet" />
         <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path d='M4 13.5C4 12.67 4.67 12 5.5 12h19c.83 0 1.5.67 1.5 1.5C26 19.3 21.3 24 15.5 24h-1C8.7 24 4 19.3 4 13.5z' fill='%232F6B4F'/><path d='M11 8C11 6.5 12 5 13 4' stroke='%23C98A2C' stroke-width='1.6' stroke-linecap='round' fill='none'/><path d='M15 8C15 6 16.2 4.5 17 3.5' stroke='%23C98A2C' stroke-width='1.6' stroke-linecap='round' fill='none'/></svg>" />
 
-        <title>Comestible</title>
+        <title>Comestible — Cumplimiento sanitario para negocios de alimentos</title>
     </head>
     <body>
         <a class="skip-link" href="#content">Saltar al contenido principal</a>
@@ -38,12 +41,11 @@
                     <a href="about.html" class="header__nav-link">Acerca</a>
                 </nav>
                 <a class="btn btn--primary header__cta" href="https://wa.me/573144623898" target="_blank" rel="noopener noreferrer">Escríbenos</a>
-                <label for="nav-check" class="header__toggle" aria-label="Abrir menú">
+                <button type="button" class="header__toggle" id="nav-toggle" aria-label="Menú" aria-controls="mobile-panel" aria-expanded="false">
                     <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M2 5h16M2 10h16M2 15h16" stroke="#1C231F" stroke-width="1.6" stroke-linecap="round"/></svg>
-                </label>
+                </button>
             </div>
-            <input type="checkbox" id="nav-check" class="header__checkbox" />
-            <div class="header__mobile-panel">
+            <div class="header__mobile-panel" id="mobile-panel">
                 <a href="index.html" class="header__mobile-link header__mobile-link--current">Inicio</a>
                 <a href="services.html" class="header__mobile-link">Servicios</a>
                 <a href="blog.html" class="header__mobile-link">Blog</a>
@@ -65,8 +67,8 @@
                         </div>
                     </div>
                     <div class="flow hero__flow">
-                        <button class="flow__item" data-target="f1">
-                            <span class="flow__emoji">🎓</span> Capacitarme en manipulación de alimentos
+                        <button type="button" class="flow__item" aria-expanded="false" aria-controls="f1">
+                            <span class="flow__emoji" aria-hidden="true">🎓</span> Capacitarme en manipulación de alimentos
                             <svg class="flow__chevron" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M6 3l5 5-5 5" stroke="#4B564E" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
                         </button>
                         <div class="flow__panel" id="f1">
@@ -76,19 +78,19 @@
                             </div>
                         </div>
 
-                        <button class="flow__item" data-target="f2">
-                            <span class="flow__emoji">📋</span> Verificar mi producto
+                        <button type="button" class="flow__item" aria-expanded="false" aria-controls="f2">
+                            <span class="flow__emoji" aria-hidden="true">📋</span> Verificar mi producto
                             <svg class="flow__chevron" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M6 3l5 5-5 5" stroke="#4B564E" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
                         </button>
                         <div class="flow__panel" id="f2">
                             <div class="flow__panel-inner">
-                                <p class="flow__text">Te explicamos qué necesitas para poner tu producto en regla: tabla nutricional (Elaboramos tus cálculos), rotulado y documentación.</p>
+                                <p class="flow__text">Te explicamos qué necesitas para poner tu producto en regla: tabla nutricional (elaboramos tus cálculos), rotulado y documentación.</p>
                                 <a class="flow__link" href="blog.html">Ver la guía en el blog</a>
                             </div>
                         </div>
 
-                        <button class="flow__item" data-target="f3">
-                            <span class="flow__emoji">🏛️</span> Tramitar mi autorización sanitaria (INVIMA)
+                        <button type="button" class="flow__item" aria-expanded="false" aria-controls="f3">
+                            <span class="flow__emoji" aria-hidden="true">🏛️</span> Tramitar mi autorización sanitaria (INVIMA)
                             <svg class="flow__chevron" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M6 3l5 5-5 5" stroke="#4B564E" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
                         </button>
                         <div class="flow__panel" id="f3">
@@ -98,8 +100,8 @@
                             </div>
                         </div>
 
-                        <button class="flow__item" data-target="f4">
-                            <span class="flow__emoji">🧭</span> No sé por dónde empezar
+                        <button type="button" class="flow__item" aria-expanded="false" aria-controls="f4">
+                            <span class="flow__emoji" aria-hidden="true">🧭</span> No sé por dónde empezar
                             <svg class="flow__chevron" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M6 3l5 5-5 5" stroke="#4B564E" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
                         </button>
                         <div class="flow__panel" id="f4">
@@ -172,33 +174,113 @@
                 </div>
             </section>
 
-            <!-- OJO: los nombres de abajo son ejemplos ilustrativos, reemplazar por negocios reales antes de publicar el sitio. -->
             <section class="band band--alt" id="casos">
                 <div class="wrap trust">
                     <div class="section-head">
                         <h2 class="section-head__title">Negocios que ya trabajaron con nosotros</h2>
                         <p class="section-head__text">Algunos de los negocios que hemos acompañado en su proceso de cumplimiento sanitario.</p>
                     </div>
-                    <div class="trust__row">
-                        <span class="trust__chip">Postres The Factory Sweet</span>
-                        <span class="trust__chip">Cafe Quema La Casa</span>
-                        <span class="trust__chip">Lácteos La Cabrita</span>
-                        <span class="trust__chip">Restaurante "De Las Villas"</span>
-                        <span class="trust__chip">Distribuidora De Pollo De La Sabana</span>
-                        <span class="trust__chip">Carnes - Directo Al Cliente</span>
-                        <span class="trust__chip">Districerdos Cajicá</span>
-                        <span class="trust__chip">Districerdos Brahman</span>
-                        <span class="trust__chip">Pulpas de fruta - Lo Sano Te Alimenta</span>
-                        <span class="trust__chip">Fabrica de Arepas - Arepas JB</span>
+                    <div class="marquee" tabindex="0" role="group" aria-label="Negocios que han trabajado con nosotros">
+                        <div class="marquee__row">
+                            <ul class="marquee__group">
+                                <li class="marquee__card">
+                                    <span class="marquee__segment"><span aria-hidden="true">🥤</span> Alimentos y bebidas</span>
+                                    <span class="marquee__name">Postres The Factory Sweet</span>
+                                </li>
+                                <li class="marquee__card">
+                                    <span class="marquee__segment"><span aria-hidden="true">🥩</span> Carnes</span>
+                                    <span class="marquee__name">Distribuidora De Pollo De La Sabana</span>
+                                </li>
+                                <li class="marquee__card">
+                                    <span class="marquee__segment"><span aria-hidden="true">🥤</span> Alimentos y bebidas</span>
+                                    <span class="marquee__name">Café Quema La Casa</span>
+                                </li>
+                                <li class="marquee__card">
+                                    <span class="marquee__segment"><span aria-hidden="true">🥩</span> Carnes</span>
+                                    <span class="marquee__name">Carnes - Directo Al Cliente</span>
+                                </li>
+                                <li class="marquee__card">
+                                    <span class="marquee__segment"><span aria-hidden="true">🥤</span> Alimentos y bebidas</span>
+                                    <span class="marquee__name">Lácteos La Cabrita</span>
+                                </li>
+                            </ul>
+                            <ul class="marquee__group" aria-hidden="true">
+                                <li class="marquee__card">
+                                    <span class="marquee__segment"><span aria-hidden="true">🥤</span> Alimentos y bebidas</span>
+                                    <span class="marquee__name">Postres The Factory Sweet</span>
+                                </li>
+                                <li class="marquee__card">
+                                    <span class="marquee__segment"><span aria-hidden="true">🥩</span> Carnes</span>
+                                    <span class="marquee__name">Distribuidora De Pollo De La Sabana</span>
+                                </li>
+                                <li class="marquee__card">
+                                    <span class="marquee__segment"><span aria-hidden="true">🥤</span> Alimentos y bebidas</span>
+                                    <span class="marquee__name">Café Quema La Casa</span>
+                                </li>
+                                <li class="marquee__card">
+                                    <span class="marquee__segment"><span aria-hidden="true">🥩</span> Carnes</span>
+                                    <span class="marquee__name">Carnes - Directo Al Cliente</span>
+                                </li>
+                                <li class="marquee__card">
+                                    <span class="marquee__segment"><span aria-hidden="true">🥤</span> Alimentos y bebidas</span>
+                                    <span class="marquee__name">Lácteos La Cabrita</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="marquee__row marquee__row--reverse">
+                            <ul class="marquee__group">
+                                <li class="marquee__card">
+                                    <span class="marquee__segment"><span aria-hidden="true">🥤</span> Alimentos y bebidas</span>
+                                    <span class="marquee__name">Restaurante "De Las Villas"</span>
+                                </li>
+                                <li class="marquee__card">
+                                    <span class="marquee__segment"><span aria-hidden="true">🥩</span> Carnes</span>
+                                    <span class="marquee__name">Districerdos Cajicá</span>
+                                </li>
+                                <li class="marquee__card">
+                                    <span class="marquee__segment"><span aria-hidden="true">🥤</span> Alimentos y bebidas</span>
+                                    <span class="marquee__name">Pulpas de fruta - Lo Sano Te Alimenta</span>
+                                </li>
+                                <li class="marquee__card">
+                                    <span class="marquee__segment"><span aria-hidden="true">🥩</span> Carnes</span>
+                                    <span class="marquee__name">Districerdos Brahman</span>
+                                </li>
+                                <li class="marquee__card">
+                                    <span class="marquee__segment"><span aria-hidden="true">🥤</span> Alimentos y bebidas</span>
+                                    <span class="marquee__name">Fábrica de Arepas - Arepas JB</span>
+                                </li>
+                            </ul>
+                            <ul class="marquee__group" aria-hidden="true">
+                                <li class="marquee__card">
+                                    <span class="marquee__segment"><span aria-hidden="true">🥤</span> Alimentos y bebidas</span>
+                                    <span class="marquee__name">Restaurante "De Las Villas"</span>
+                                </li>
+                                <li class="marquee__card">
+                                    <span class="marquee__segment"><span aria-hidden="true">🥩</span> Carnes</span>
+                                    <span class="marquee__name">Districerdos Cajicá</span>
+                                </li>
+                                <li class="marquee__card">
+                                    <span class="marquee__segment"><span aria-hidden="true">🥤</span> Alimentos y bebidas</span>
+                                    <span class="marquee__name">Pulpas de fruta - Lo Sano Te Alimenta</span>
+                                </li>
+                                <li class="marquee__card">
+                                    <span class="marquee__segment"><span aria-hidden="true">🥩</span> Carnes</span>
+                                    <span class="marquee__name">Districerdos Brahman</span>
+                                </li>
+                                <li class="marquee__card">
+                                    <span class="marquee__segment"><span aria-hidden="true">🥤</span> Alimentos y bebidas</span>
+                                    <span class="marquee__name">Fábrica de Arepas - Arepas JB</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <p class="trust__note">* Ejemplos de referencia — reemplazar por clientes reales antes de publicar.</p>
                 </div>
             </section>
         </main>
 
         <footer class="footer">
             <div class="wrap">
-                <p class="footer__text">© 2024 comestible.co — Todos los derechos reservados.</p>
+                <p class="footer__text">© <span data-year>2026</span> comestible.co — Todos los derechos reservados.</p>
             </div>
         </footer>
 
