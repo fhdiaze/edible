@@ -188,55 +188,56 @@
                         <h2 class="section-head__title">Negocios que ya trabajaron con nosotros</h2>
                         <p class="section-head__text">Algunos de los negocios que hemos acompañado en su proceso de cumplimiento sanitario.</p>
                     </div>
-                    <div class="marquee" role="group" aria-label="Negocios que han trabajado con nosotros">
-                        <button type="button" class="marquee__toggle">Pausar animación</button>
-                        <div class="marquee__row">
-                            <ul class="marquee__group">
-                                <li class="marquee__card">
-                                    <span class="marquee__segment"><span aria-hidden="true">🍰</span> Postres</span>
-                                    <span class="marquee__name">Postres The Factory Sweet</span>
-                                </li>
-                                <li class="marquee__card">
-                                    <span class="marquee__segment"><span aria-hidden="true">🥩</span> Carnes</span>
-                                    <span class="marquee__name">Distribuidora De Pollo De La Sabana</span>
-                                </li>
-                                <li class="marquee__card">
-                                    <span class="marquee__segment"><span aria-hidden="true">☕</span> Café</span>
-                                    <span class="marquee__name">Café Quema La Casa</span>
-                                </li>
-                                <li class="marquee__card">
-                                    <span class="marquee__segment"><span aria-hidden="true">🥩</span> Carnes</span>
-                                    <span class="marquee__name">Carnes - Directo Al Cliente</span>
-                                </li>
-                                <li class="marquee__card">
-                                    <span class="marquee__segment"><span aria-hidden="true">🧀</span> Lácteos</span>
-                                    <span class="marquee__name">Lácteos La Cabrita</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="marquee__row marquee__row--reverse">
-                            <ul class="marquee__group">
-                                <li class="marquee__card">
-                                    <span class="marquee__segment"><span aria-hidden="true">🍽️</span> Restaurante</span>
-                                    <span class="marquee__name">Restaurante "De Las Villas"</span>
-                                </li>
-                                <li class="marquee__card">
-                                    <span class="marquee__segment"><span aria-hidden="true">🥩</span> Carnes</span>
-                                    <span class="marquee__name">Districerdos Cajicá</span>
-                                </li>
-                                <li class="marquee__card">
-                                    <span class="marquee__segment"><span aria-hidden="true">🍓</span> Pulpas de fruta</span>
-                                    <span class="marquee__name">Pulpas de fruta - Lo Sano Te Alimenta</span>
-                                </li>
-                                <li class="marquee__card">
-                                    <span class="marquee__segment"><span aria-hidden="true">🥩</span> Carnes</span>
-                                    <span class="marquee__name">Districerdos Brahman</span>
-                                </li>
-                                <li class="marquee__card">
-                                    <span class="marquee__segment"><span aria-hidden="true">🌽</span> Productos de maíz</span>
-                                    <span class="marquee__name">Fábrica de Arepas - Arepas JB</span>
-                                </li>
-                            </ul>
+                    <div class="carousel">
+                        <ul class="carousel__track" tabindex="0" aria-label="Negocios que han trabajado con nosotros">
+                            <li class="carousel__card">
+                                <span class="carousel__segment"><span aria-hidden="true">🍰</span> Postres</span>
+                                <span class="carousel__name">Postres The Factory Sweet</span>
+                            </li>
+                            <li class="carousel__card">
+                                <span class="carousel__segment"><span aria-hidden="true">🥩</span> Carnes</span>
+                                <span class="carousel__name">Distribuidora De Pollo De La Sabana</span>
+                            </li>
+                            <li class="carousel__card">
+                                <span class="carousel__segment"><span aria-hidden="true">☕</span> Café</span>
+                                <span class="carousel__name">Café Quema La Casa</span>
+                            </li>
+                            <li class="carousel__card">
+                                <span class="carousel__segment"><span aria-hidden="true">🥩</span> Carnes</span>
+                                <span class="carousel__name">Carnes - Directo Al Cliente</span>
+                            </li>
+                            <li class="carousel__card">
+                                <span class="carousel__segment"><span aria-hidden="true">🧀</span> Lácteos</span>
+                                <span class="carousel__name">Lácteos La Cabrita</span>
+                            </li>
+                            <li class="carousel__card">
+                                <span class="carousel__segment"><span aria-hidden="true">🍽️</span> Restaurante</span>
+                                <span class="carousel__name">Restaurante "De Las Villas"</span>
+                            </li>
+                            <li class="carousel__card">
+                                <span class="carousel__segment"><span aria-hidden="true">🥩</span> Carnes</span>
+                                <span class="carousel__name">Districerdos Cajicá</span>
+                            </li>
+                            <li class="carousel__card">
+                                <span class="carousel__segment"><span aria-hidden="true">🍓</span> Pulpas de fruta</span>
+                                <span class="carousel__name">Pulpas de fruta - Lo Sano Te Alimenta</span>
+                            </li>
+                            <li class="carousel__card">
+                                <span class="carousel__segment"><span aria-hidden="true">🥩</span> Carnes</span>
+                                <span class="carousel__name">Districerdos Brahman</span>
+                            </li>
+                            <li class="carousel__card">
+                                <span class="carousel__segment"><span aria-hidden="true">🌽</span> Productos de maíz</span>
+                                <span class="carousel__name">Fábrica de Arepas - Arepas JB</span>
+                            </li>
+                        </ul>
+                        <div class="carousel__controls" hidden>
+                            <button type="button" class="carousel__btn carousel__btn--prev" aria-label="Ver negocios anteriores">
+                                <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </button>
+                            <button type="button" class="carousel__btn carousel__btn--next" aria-label="Ver más negocios">
+                                <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </button>
                         </div>
                     </div>
                 </div>

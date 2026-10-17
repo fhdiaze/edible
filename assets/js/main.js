@@ -71,20 +71,27 @@
         document.querySelectorAll('.flow__panel-inner').forEach(function (inner) { panelObserver.observe(inner); });
     }
 
-    // Logos marquee: duplicate each row so the loop is seamless, with a pause button (WCAG 2.2.2). Without JS the cards show as a static grid
-    var marquee = document.querySelector('.marquee');
-    if (marquee) {
-        marquee.querySelectorAll('.marquee__group').forEach(function (group) {
-            var copy = group.cloneNode(true);
-            copy.setAttribute('aria-hidden', 'true');
-            group.after(copy);
+    // Clients carousel: native swipe/scroll/keyboard, plus prev/next buttons shown only when JS runs
+    var carousel = document.querySelector('.carousel');
+    if (carousel) {
+        var track = carousel.querySelector('.carousel__track');
+        var carouselControls = carousel.querySelector('.carousel__controls');
+        var carouselPrev = carousel.querySelector('.carousel__btn--prev');
+        var carouselNext = carousel.querySelector('.carousel__btn--next');
+        var updateCarousel = function () {
+            carouselPrev.disabled = track.scrollLeft <= 1;
+            carouselNext.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 1;
+        };
+        carouselPrev.addEventListener('click', function () {
+            track.scrollBy({ left: -track.clientWidth * 0.8 });
         });
-        marquee.classList.add('marquee--loop');
-        var marqueeToggle = marquee.querySelector('.marquee__toggle');
-        marqueeToggle.addEventListener('click', function () {
-            var paused = marquee.classList.toggle('marquee--paused');
-            marqueeToggle.textContent = paused ? 'Reanudar animación' : 'Pausar animación';
+        carouselNext.addEventListener('click', function () {
+            track.scrollBy({ left: track.clientWidth * 0.8 });
         });
+        track.addEventListener('scroll', updateCarousel, { passive: true });
+        window.addEventListener('resize', updateCarousel);
+        carouselControls.hidden = false;
+        updateCarousel();
     }
 
     document.querySelectorAll('[data-year]').forEach(function (el) {
