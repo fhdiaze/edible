@@ -3,22 +3,29 @@
     var navToggle = document.getElementById('nav-toggle');
     var mobilePanel = document.getElementById('mobile-panel');
     if (navToggle && mobilePanel) {
+        var closeNav = function () {
+            mobilePanel.classList.remove('header__mobile-panel--open');
+            navToggle.setAttribute('aria-expanded', 'false');
+        };
         navToggle.addEventListener('click', function () {
             var open = navToggle.getAttribute('aria-expanded') !== 'true';
             mobilePanel.classList.toggle('header__mobile-panel--open', open);
             navToggle.setAttribute('aria-expanded', open);
         });
         mobilePanel.querySelectorAll('a').forEach(function (link) {
-            link.addEventListener('click', function () {
-                mobilePanel.classList.remove('header__mobile-panel--open');
-                navToggle.setAttribute('aria-expanded', 'false');
-            });
+            link.addEventListener('click', closeNav);
         });
         window.matchMedia('(min-width: 820px)').addEventListener('change', function (e) {
-            if (e.matches) {
-                mobilePanel.classList.remove('header__mobile-panel--open');
-                navToggle.setAttribute('aria-expanded', 'false');
+            if (e.matches) closeNav();
+        });
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && navToggle.getAttribute('aria-expanded') === 'true') {
+                closeNav();
+                navToggle.focus();
             }
+        });
+        document.addEventListener('click', function (e) {
+            if (!mobilePanel.contains(e.target) && !navToggle.contains(e.target)) closeNav();
         });
     }
 
@@ -53,12 +60,32 @@
         });
     });
 
-    // The open panel's height is fixed in px, so refit it when the text rewraps
-    window.addEventListener('resize', function () {
-        var active = document.querySelector('.flow__item--active');
-        var panel = active && document.getElementById(active.getAttribute('aria-controls'));
-        if (panel) panel.style.maxHeight = panel.scrollHeight + 'px';
-    });
+    // The open panel's height is fixed in px, so refit it whenever its content changes size (resize, font swap)
+    if (window.ResizeObserver) {
+        var panelObserver = new ResizeObserver(function (entries) {
+            entries.forEach(function (entry) {
+                var panel = entry.target.parentElement;
+                if (panel.style.maxHeight) panel.style.maxHeight = panel.scrollHeight + 'px';
+            });
+        });
+        document.querySelectorAll('.flow__panel-inner').forEach(function (inner) { panelObserver.observe(inner); });
+    }
+
+    // Logos marquee: duplicate each row so the loop is seamless, with a pause button (WCAG 2.2.2). Without JS the cards show as a static grid
+    var marquee = document.querySelector('.marquee');
+    if (marquee) {
+        marquee.querySelectorAll('.marquee__group').forEach(function (group) {
+            var copy = group.cloneNode(true);
+            copy.setAttribute('aria-hidden', 'true');
+            group.after(copy);
+        });
+        marquee.classList.add('marquee--loop');
+        var marqueeToggle = marquee.querySelector('.marquee__toggle');
+        marqueeToggle.addEventListener('click', function () {
+            var paused = marquee.classList.toggle('marquee--paused');
+            marqueeToggle.textContent = paused ? 'Reanudar animación' : 'Pausar animación';
+        });
+    }
 
     document.querySelectorAll('[data-year]').forEach(function (el) {
         el.textContent = new Date().getFullYear();

@@ -658,15 +658,33 @@ svg {
     color: var(--ink);
 }
 
+.marquee__toggle {
+    display: none;
+    align-self: flex-start;
+    font: inherit;
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    background: none;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
 @media (prefers-reduced-motion: no-preference) {
-    .marquee__row {
+    .marquee--loop .marquee__toggle {
+        display: inline-flex;
+    }
+
+    .marquee--loop .marquee__row {
         display: flex;
         overflow: hidden;
+        -webkit-mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
         mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
     }
 
-    .marquee__group,
-    .marquee__group[aria-hidden="true"] {
+    .marquee--loop .marquee__group,
+    .marquee--loop .marquee__group[aria-hidden="true"] {
         display: flex;
         flex: none;
         min-width: 100%;
@@ -674,20 +692,20 @@ svg {
         animation: marquee-scroll 45s linear infinite;
     }
 
-    .marquee__row--reverse .marquee__group {
+    .marquee--loop .marquee__row--reverse .marquee__group {
         animation-direction: reverse;
     }
 
-    .marquee:hover .marquee__group,
-    .marquee:focus-within .marquee__group {
+    .marquee--loop:hover .marquee__group,
+    .marquee--paused .marquee__group {
         animation-play-state: paused;
     }
 
-    .marquee__card {
+    .marquee--loop .marquee__card {
         flex: none;
     }
 
-    .marquee__name {
+    .marquee--loop .marquee__name {
         white-space: nowrap;
     }
 }
